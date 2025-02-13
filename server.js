@@ -59,6 +59,23 @@ app.get('/', async function (request, response) {
   response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
 
+app.get('/squad1g', async function (request, response) {  
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}}]}')
+  const personResponseJSON = await personResponse.json() 
+
+  response.render('squad1g.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+})
+
+app.get('/squad1h', async function (request, response) {  
+
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}}]}')
+  const personResponseJSON = await personResponse.json() 
+
+  response.render('squad1g.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+})
+
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 app.post('/', async function (request, response) {
   // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt

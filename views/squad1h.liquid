@@ -1,0 +1,49 @@
+{% render 'partials/head.liquid', title: 'Squad page' %}
+
+
+
+<main>
+
+<h1>
+</h1>
+<button></button> <button></button>
+
+
+<section class=" ">
+
+{% for person in persons %}
+
+  <section class="character-card"> 
+
+
+<div class="profile-photo">
+
+  <img src="img/{{person.id}}js" alt="{{person.name}}">
+
+  </div>
+
+
+<section class="info">
+
+<h2>{{person.name}} - {{person.id}}</h2>
+<h3>Welcome to the Tribe <span id="squad1h" {{ person.squad}} ></span></h3>
+</section>
+
+
+<section class="Tribe">
+  <h3> Squad</h3>
+</section>
+
+</section>
+{%endfor %}
+
+
+
+</section>
+
+</main>
+
+
+
+
+{% render 'partials/foot.liquid', squads: squads %}

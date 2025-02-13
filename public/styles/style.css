@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #9e6d82, #d09aa8, #ffb100);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Pricedown', sans-serif;
+    src: url(public/font/PricedownBl.otf);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+.card {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 20px); /* 3 cards per row with spacing */
+    background: rgb(199, 164, 66);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.423);
+}
+
+/* Profile Card Hover Effect */
+.profile-card:hover {
+    transform: scale(1.05);
+    cursor: url('assets/photocursor.png') 0 0, auto;
+}

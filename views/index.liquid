@@ -1,10 +1,43 @@
-{% render 'partials/head.liquid', title: 'Squad page' %}
+{% render 'partials/head.liquid', title: 'WELCOME TO OUR TRIBE' %}
 
-<h2>Students</h2>
-<ul>
-  {% for person in persons %}
-    <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
-  {% endfor %}
+
+
+<main>
+
+<a href="/squad1g" > TEAM 1G </a>
+<a href="/squad1h" > TEAM 1H</a>
+
+{% for person in persons %}
+
+  <section class="character-card"> 
+
+
+<ul class="container">
+
+<li class="card">
+ <img src="img/{{person.id}}.png" alt="{{person.name}}">
+<div> 
+<h2>{{person.name}} - {{person.id}}</h2>
+<span id="squad" {{ person.squad}} ></span></div></li> 
 </ul>
+
+
+
+
+{% comment %} <section class="Tribe">
+  <h3> Squad</h3>
+</section> {% endcomment %}
+
+</section>
+{%endfor %}
+
+
+
+</section>
+
+</main>
+
+
+
 
 {% render 'partials/foot.liquid', squads: squads %}
