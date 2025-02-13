@@ -69,10 +69,10 @@ app.get('/squad1g', async function (request, response) {
 
 app.get('/squad1h', async function (request, response) {  
 
-  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221G%22}}}]}')
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={%22_and%22:[{%22squads%22:{%22squad_id%22:{%22tribe%22:{%22name%22:%22FDND%20Jaar%201%22}}}},{%22squads%22:{%22squad_id%22:{%22name%22:%221H%22}}}]}')
   const personResponseJSON = await personResponse.json() 
 
-  response.render('squad1g.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+  response.render('squad1h.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
 })
 
 
