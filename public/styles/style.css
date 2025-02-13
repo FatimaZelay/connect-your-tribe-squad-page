@@ -9,7 +9,7 @@ body {
 
 @font-face {
     font-family: 'Pricedown', sans-serif;
-    src: url(public/font/PricedownBl.otf);
+    src: url(/Users/fatimazohra/Desktop/FDND/connect-your-tribe-squad-page/public/font/PricedownBl.otf);
 }
 
 .container {

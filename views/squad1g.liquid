@@ -4,35 +4,29 @@
 
 <main>
 
-<h1>
-</h1>
-<button></button> <button></button>
-
-
-<section class=" ">
+<a href="/squad1g" > TEAM 1G </a>
+<a href="/squad1h" > TEAM 1H</a>
+<a href="/index" > THE TRIBE </a>
 
 {% for person in persons %}
 
-  <section class="character-card"> 
+<section class="character-card"> 
 
 
-<div class="profile-photo">
-
-  <img src="img/{{person.id}}js" alt="{{person.name}}">
-
-  </div>
-
-
-<section class="info">
-
+<ul class="container">
+<li class="card">
+ <img src="img/{{person.id}}.png" alt="{{person.name}}">
+<div> 
 <h2>{{person.name}} - {{person.id}}</h2>
-<h3>Welcome to the Tribe <span id="squad1g" {{ person.squad}} ></span></h3>
-</section>
+<span id="squad" {{ person.squad}} ></span></div></li> 
+</ul>
 
 
-<section class="Tribe">
+
+
+{% comment %} <section class="Tribe">
   <h3> Squad</h3>
-</section>
+</section> {% endcomment %}
 
 </section>
 {%endfor %}
@@ -42,7 +36,6 @@
 </section>
 
 </main>
-
 
 
 

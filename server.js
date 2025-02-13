@@ -76,6 +76,7 @@ app.get('/squad1h', async function (request, response) {
 })
 
 
+
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 app.post('/', async function (request, response) {
   // Je zou hier data kunnen opslaan, of veranderen, of wat je maar wilt
