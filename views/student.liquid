@@ -1,6 +1,26 @@
-{% render 'partials/head.liquid', title: person.name %}
+{% render 'partials/head.liquid', title: "Personen overzicht" %}
+
+<form method="get" action="/">
+  <input type="text" name="search" placeholder="Zoek een naam..." value="{{ search }}">
+  <button type="submit">Zoeken</button>
+</form>
+
+{% if search %}
+  <h2>Zoekresultaten voor "{{ search }}"</h2>
+  {% assign filteredPersons = persons | where: "name", search %}
+{% else %}
+  {% assign filteredPersons = persons %}
+{% endif %}
+
+<ul>
+  {% for person in filteredPersons %}
+    <li>
+      <a href="/student/{{ person.id }}">{{ person.name }}</a> 
+      ({{ person.squads[0].squad_id.name }})
+    </li>
+  {% endfor %}
+</ul>
 
 <a href="/">Back</a>
-
 
 {% render 'partials/foot.liquid', squads: squads %}
